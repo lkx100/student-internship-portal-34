@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose'
 
 const internshipSchema = new mongoose.Schema({
     company: {
@@ -17,6 +17,7 @@ const internshipSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     }
-}, { timestamps: true });
+}, { timestamps: true })
 
-module.exports = mongoose.model('Internship', internshipSchema);
+const Internship = mongoose.model('Internship', internshipSchema)
+export default Internship
